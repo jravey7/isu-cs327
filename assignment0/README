@@ -1,0 +1,12 @@
+Assignment 0 for Com Sci 327 by Joe Avey
+
+This folder contains two programs.
+
+assignment0a:
+The first program iteratively prints the first 100,000,000 numbers in the hyperbinary integer sequence, b(n) that satisfies
+the property that every positive rational appears exactly once as b(n)/b(n+1), where n is >= 0. Usage: assignment0a
+
+assignment0b:
+The second program takes an integer, n, and recursively calculates the nth rational number. Usage: assignment0b <n>
+
+Use 'make' to build the binaries.
