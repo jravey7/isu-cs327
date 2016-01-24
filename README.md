@@ -1,0 +1,1 @@
+The git repo for Joe Avey's CS327 assignments at Iowa State University.
