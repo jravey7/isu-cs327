@@ -1,0 +1,4 @@
+	2015-01-24 Joe Avey <javey@iastate.edu>
+	* inital build of the project
+	* new file created main.c
+	Builds dungeons and prints them to stdout.

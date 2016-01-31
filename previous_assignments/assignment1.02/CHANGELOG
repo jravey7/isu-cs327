@@ -1,0 +1,10 @@
+	2015-02-02 Joe Avey <javey@iastate.edu>
+	* renamed main.c to dungeon.c
+	Now builds, loads, and saves dungeons
+	* added switches --load and --save for execution
+	User uses these switches for loading and saving dungeons
+
+	2015-01-24 Joe Avey <javey@iastate.edu>
+	* inital build of the project
+	* new file created main.c
+	Builds dungeons and prints them to stdout.

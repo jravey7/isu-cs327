@@ -1,0 +1,24 @@
+Author: Joe Avey
+Class: CS327
+Assignment: 1.01
+
+Use make to build the executable and run "./assignment1.01"
+
+SUMMARY:
+This is the first build of the rougelike game. The code builds an 84x21 dungeon
+with at least 5 rooms and corridors to make the rooms fully connected. The
+dungeon is a 2D array of "dungeon_node_t" which is a struct that holds the type
+of a dungeon point. It also prints the dungeon to standard output as ASCII
+characters.
+
+NEW FILES:
+main.c - contains main() and the functions for building a random dungeon
+
+NEW DATA STRUCTURES:
+room_t: holds the x and y position of a room and its size
+
+dungeon_node_t:  one point in the dungeon; holds a type (ROOM,ROCK,
+CORRDIDOR,IMMUTABLE), and a rock hardness (0 for non-rocks, 1-99 for rocks,
+100 for immutable)
+
+point_t: simple struct for a point (x,y)

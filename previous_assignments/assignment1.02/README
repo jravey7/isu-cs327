@@ -1,0 +1,18 @@
+Author: Joe Avey
+Class: CS327
+Assignment: 1.02
+
+Use make to build the executable and run "./assignment1.02"
+
+SUMMARY:
+This is the second build of the rougelike game. The updated code is now capable of
+saving and loading dungeons. Use switch "--save" to save the next built dungeon.
+Use switch "--load" to load a dungeon from the file ~/.rlg327/dungeon. Use both
+switches to load a dungeon and redudantly save over the dungeon file with the
+same dungeon data (used mostly for testing purposes).
+
+NEW FILES:
+dungeon.c - main.c had been renamed to dungeon.c. In the future there will be another main.c which will #include headers
+
+NEW DATA STRUCTURES:
+(no new data stuctures this build)
