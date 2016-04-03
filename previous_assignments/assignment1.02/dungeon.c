@@ -212,10 +212,20 @@ int init_dungeon_load(char * filepath)
 	{
 	    char current_cell_str[2] = {};
 	    uint8_t current_cell_hardness = fgetc(dungeon_file);
-	    dungeon[i][j].type = ROCK;	    
+
+	    // interpret all cells of 0 rock hardness as corridors
+	    // rooms are added later
+	    if(current_cell_hardness == 0)		
+		dungeon[i][j].type = CORRIDOR;
+			    
+	    else 
+		dungeon[i][j].type = ROCK;	    
+
 	    dungeon[i][j].rock_hardness = current_cell_hardness;
 	    dungeon[i][j].is_room_edge = 0;
+
 	}
+	
     }
 
     //fill the edges with immutable rock borders
@@ -318,16 +328,9 @@ int init_dungeon_load(char * filepath)
 	   current_room = current_room->next_room;
     }
 
-     // connect the first room to each of the rooms  
-    room_t * room_to_connect = temp_room_list;
-  
-    for(i = 1; i < temp_num_rooms; i++)
-    {
-	room_to_connect = room_to_connect->next_room;	  
-
-	connect_rooms(temp_room_list, room_to_connect);
-    }
-
+    // the rooms do not need to be connected by this function
+    // because the corridors are already given in the loaded dungeon file
+    
     //free the temporary rooms list
     current_room = temp_room_list;
     room_t * helper = current_room;
@@ -498,7 +501,10 @@ int connect_rooms(room_t * room1, room_t * room2)
 	while(corridor_pos.y < room2_center.y)
 	{
 	    if(dungeon[corridor_pos.y][corridor_pos.x].type != ROOM && dungeon[corridor_pos.y][corridor_pos.x].type != IMMUTABLE)
+	    {
+		dungeon[corridor_pos.y][corridor_pos.x].rock_hardness = 0.0;
 		dungeon[corridor_pos.y][corridor_pos.x].type = CORRIDOR;
+	    }
 	    corridor_pos.y += 1;
 	}
     }
@@ -507,7 +513,10 @@ int connect_rooms(room_t * room1, room_t * room2)
 	while(corridor_pos.y > room2_center.y)
 	{
 	    if(dungeon[corridor_pos.y][corridor_pos.x].type != ROOM && dungeon[corridor_pos.y][corridor_pos.x].type != IMMUTABLE)
+	    {
+		dungeon[corridor_pos.y][corridor_pos.x].rock_hardness = 0.0;
 		dungeon[corridor_pos.y][corridor_pos.x].type = CORRIDOR;
+	    }
 	    corridor_pos.y -= 1;
 	}
     }
@@ -518,7 +527,10 @@ int connect_rooms(room_t * room1, room_t * room2)
 	while(corridor_pos.x < room2_center.x)
 	{
 	    if(dungeon[corridor_pos.y][corridor_pos.x].type != ROOM && dungeon[corridor_pos.y][corridor_pos.x].type != IMMUTABLE)
+	    {
+		dungeon[corridor_pos.y][corridor_pos.x].rock_hardness = 0.0;
 		dungeon[corridor_pos.y][corridor_pos.x].type = CORRIDOR;
+	    }
 	    corridor_pos.x += 1;
 	}
     }
@@ -527,7 +539,10 @@ int connect_rooms(room_t * room1, room_t * room2)
 	while(corridor_pos.x > room2_center.x)
 	{
 	    if(dungeon[corridor_pos.y][corridor_pos.x].type != ROOM && dungeon[corridor_pos.y][corridor_pos.x].type != IMMUTABLE)
+	    {
+		dungeon[corridor_pos.y][corridor_pos.x].rock_hardness = 0.0;
 		dungeon[corridor_pos.y][corridor_pos.x].type = CORRIDOR;
+	    }
 	    corridor_pos.x -= 1;
 	}
     }

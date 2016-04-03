@@ -1,0 +1,16 @@
+	2015-02-09 Joe Avey <javey@iastate.edu>
+	* added files heap.(c/h) and macros.h
+	Uses the heap as a priority queue for Dijkstra's algo.
+	* the executeable now prints 3 dungeons
+	1) normal dungeon 2) non-tunneling dist 3) tunneling dist
+	
+	2015-02-02 Joe Avey <javey@iastate.edu>
+	* renamed main.c to dungeon.c
+	Now builds, loads, and saves dungeons
+	* added switches --load and --save for execution
+	User uses these switches for loading and saving dungeons
+
+	2015-01-24 Joe Avey <javey@iastate.edu>
+	* inital build of the project
+	* new file created main.c
+	Builds dungeons and prints them to stdout.

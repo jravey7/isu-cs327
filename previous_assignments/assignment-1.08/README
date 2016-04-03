@@ -1,0 +1,20 @@
+Author: Joe Avey
+Class: CS327
+Assignment: 1.08
+
+Use make to build the executable and run "./rlg327"
+
+SUMMARY:
+This is the eigth build of the rougelike game. This iteration implements
+objects from given descriptions. Currently, objects appear in the dungeon
+but they can't be used. This build also adds monsters from descriptions.
+The objects and monsters are given a color from their description and
+rendered as that color in the dungeon. I've taken out fog of war for this
+build in order to easily see the objects and monsters in the dungeon.
+However, I did implement colors with fog of war, its just not used.
+
+NEW FILES:
+object.cpp/.h - the class and functions for instances of objects
+
+NEW DATA STRUCTURES:
+Classes: object - holds a an instance of an object

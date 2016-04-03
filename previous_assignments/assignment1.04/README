@@ -1,0 +1,23 @@
+Author: Joe Avey
+Class: CS327
+Assignment: 1.04
+
+Use make to build the executable and run "./assignment1.04"
+
+SUMMARY:
+This is the fourth build of the rougelike game. This iteration adds monsters. 
+The build now runs a mini game that ends when either all monsters are dead 
+or the pc is dead. There are 16 types of monsters (0-f) that can take on up 
+to four abilities, which are intelligent, telepathic, tunnelling, and 
+erratic. Currently, the intelligent monsters behave the same as telepathic,
+they both move on the shortest path to the PC and know where the PC is always. 
+The tunneling monsters do not move toward the PC, but randomly instead. I was
+not able to find time to implement the movement towards the PC without it 
+being the shortest path, in other words the straight path.
+
+NEW FILES:
+there are no new files this build
+
+NEW DATA STRUCTURES:
+character_t - the struct for holding character abilities, their position,
+and their status (alive/dead)

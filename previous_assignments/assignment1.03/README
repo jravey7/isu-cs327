@@ -1,0 +1,24 @@
+Author: Joe Avey
+Class: CS327
+Assignment: 1.03
+
+Use make to build the executable and run "./assignment1.03"
+
+SUMMARY:
+This is the third build of the rougelike game. This iteration prints three maps. 
+1) the normally rendered dungeon, 2) a non-tunneling distance map, and
+3) a tunneling distance map. This code implements Dijkstra's algorithm for finding
+the shortest path between two dungeon nodes. Each cell in the distance maps 
+represents the distance between that cell and the Player Character (represented as 
+'@' in the normal dungeon). The distance is in the range [0,62] with the double 
+digit ranges represented as a-z and then A-z.
+
+NEW FILES:
+heap(.c/.h) - a library that implements a heap with priority queue capabilities. Given
+by Jeremy Sheaffer.
+macros.h - added to support the heap library
+
+NEW DATA STRUCTURES:
+heap - data structure used to implement a priority queue
+vertex_path_t - a struct to represent a series of moves
+that make up a path in the dungeon.
