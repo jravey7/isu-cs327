@@ -1,0 +1,20 @@
+Author: Joe Avey
+Class: CS327
+Assignment: 1.09
+
+Use make to build the executable and run "./rlg327"
+
+SUMMARY:
+This is the nineth build of the rougelike game. This iteration implements
+pc inventory and equipment. The pc can now pick up object and equip them
+for added speed, hitpoint, and damage bonuses. There is also new combat.
+Combat happens when a character tries to move 2 another character's cell.
+Hitpoints of the defending character are reduced by the damage rolled by
+the attacking character. If the defending character's hitpoints goes 
+below 0 then the character dies.
+
+NEW FILES:
+no new files
+
+NEW DATA STRUCTURES:
+no new data structures

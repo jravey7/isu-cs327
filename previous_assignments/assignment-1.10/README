@@ -1,0 +1,24 @@
+Author: Joe Avey
+Class: CS327
+Assignment: 1.10
+
+Use make to build the executable and run "./rlg327"
+
+SUMMARY:
+This is the tenth build of the rougelike game. This iteration implements
+pc ranged combat. The ranged combat can from a ranged weapon (must be
+equipped) or magic spell. To attack with a ranged weapon use 'B'. To
+attack with the magic spell use 'C'. The magic spell includes an area of
+effect that will damage monster in the highlighted box by 150 hitpoints.
+The ranged weapon does damage based on the dice rolled for the weapon.
+The range of the magic spell is a radius of 5 and the ranged weapon is 
+10. Both the magic spell and ranged attack can go through walls or
+around corners. Use '2' and '8' to cycle through targets and space bar
+to select the target. You can use the provided object_desc.txt to 
+include a ranged weapon (Magic Bow) in your runs.
+
+NEW FILES:
+no new files
+
+NEW DATA STRUCTURES:
+no new data structures

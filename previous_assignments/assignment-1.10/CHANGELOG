@@ -1,0 +1,49 @@
+	2016-04-19 Joe Avey <javey@iastate.edu>
+	* updated PC combat to include ranged and A.O.E. spell
+	* use 'C' for spell and 'B' for ranged attack
+	
+	2016-04-12 Joe Avey <javey@iastate.edu>
+	* updated combat between PC and NPCs
+	* added equipment and inventory for PC
+
+	2016-04-05 Joe Avey <javey@iastate.edu>
+	* added instances of objects from descriptions
+	* added instances of monsters from descriptions
+	* added color for characters and objects	
+
+	2016-03-29 Joe Avey <javey@iastate.edu>
+	* added capabilities for monster description parsing
+	* prints the parsed monster description list
+
+	2016-03-22 Joe Avey <javey@iastate.edu>
+	* converted character, npc, and pc types to C++ classes
+	* added the "fog of war" feature with radius of 3 spaces
+
+	2016-03-08 Joe Avey <javey@iastate.edu>
+	* switched to code base solution from Jeremy Sheaffer
+	assignment 1.04
+	* the game can now be controlled by numpad and/or kb
+	* added files user_input.c/h for handling user input
+	
+	2016-02-23 Joe Avey <javey@iastate.edu>
+	* added struct character_t for character abils/status
+	* the executeable now runs a mini game that ends
+	when either all monsters are dead or the pc is dead
+
+	2016-02-09 Joe Avey <javey@iastate.edu>
+	* added files heap.(c/h) and macros.h
+	Uses the heap as a priority queue for Dijkstra's algo.
+	* the executeable now prints 3 dungeons
+	1) normal dungeon 2) non-tunneling dist 3) tunneling dist
+	
+	2016-02-02 Joe Avey <javey@iastate.edu>
+	* renamed main.c to dungeon.c
+	Now builds, loads, and saves dungeons
+	* added switches --load and --save for execution
+	User uses these switches for loading and saving dungeons
+
+	2016-01-24 Joe Avey <javey@iastate.edu>
+	* inital build of the project
+	* new file created main.c
+	Builds dungeons and prints them to stdout.
+	
